@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Line endings
+# ---------------------------------------------------------------------------
+# Let git auto-detect text files and normalize to LF in the repository.
+# This keeps .ini / .uproject / .json files diffable across Windows and *nix.
+* text=auto
+
+# ---------------------------------------------------------------------------
+# Binary assets
+# ---------------------------------------------------------------------------
+# Unreal's .uasset / .umap and the source art under "Raw Content" are binary.
+# Mark them as such so git never tries to diff or line-ending-normalise them.
+*.uasset binary
+*.umap   binary
+*.uexp   binary
+*.ubulk  binary
+
+*.fbx   binary
+*.blend binary
+*.glb   binary
+*.gltf  text
+
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.tga   binary
+*.exr   binary
+*.psd   binary
+
+*.mp3   binary
+*.wav   binary
+*.ogg   binary
+
+*.zip   binary
+*.rar   binary
+*.bin   binary
+
+*.ttf   binary
+*.otf   binary
+
+# Plain-text sources stay diffable and reviewable
+*.obj  text
+*.mtl  text
+*.txt  text
+*.ini  text
+*.json text
+*.uproject text
+*.uplugin text
